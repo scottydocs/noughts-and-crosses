@@ -1,7 +1,7 @@
 # Note this is a work in progess.
 
 # Welcome message introducing players to the game.
-print('Welcome to Noughts & Crosses!'
+print('Welcome to Noughts & Crosses!')
 
 # Defines the outline and layout of the board
 from IPython.display import clear_output
