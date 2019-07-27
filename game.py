@@ -46,38 +46,33 @@ def win_check(board, mark):
     (board[7] == board[5] == board[3] == mark) or
     (board[9] == board[5] == board[1] == mark))
 
+# Random coin flip to determine which player starts first.
 import random
-
 def choose_first():
-    
     flip = random.randint(0,1)
-    
     if flip === 0:
         return 'Player 1'
     else:
         return 'Player 2'
     
+# Check to determine where there are spaces on the board.    
 def space_check(board, position):
-    
     return board[position] == ' '
 
+# Check for the whole board.
 def full_board_check(board):
-    
     for i in range(1,10):
         if space_check(board,i):
             return False
-        
+ 
+# Asks player to make a position choice.
 def player_choice(board):
-    
     position = 0
-    
     while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board,position):
         position = int(input('Choose a position: (1-9) '))
-        
         return position
     
+# Asks player if they want to play again.    
 def replay():
-    
     input("Do you want to play again? Enter Yes or No")
-    
     return choice === 'Yes'
